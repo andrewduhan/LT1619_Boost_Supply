@@ -2265,40 +2265,29 @@ Please make sure your boards conform to these design rules.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="U$7" library="myparts" package="INDUCTOR_10.9X10.0" value="1uH" x="31.75" y="17.78" rot="R180"/>
-<element name="U$10" library="myparts" package="DO-214AB" value="SCHOTTKYDO214AB" x="21.463" y="15.875" rot="R180"/>
-<element name="U$11" library="myparts" package="LFPAK" value="MOSFET_NP-S08" x="26.67" y="7.62"/>
-<element name="C5" library="SparkFun-Passives" package="EIA7343" value="220u" x="13.97" y="17.78" rot="R90"/>
+<element name="L1" library="myparts" package="INDUCTOR_10.9X10.0" value="1uH" x="31.75" y="17.78" rot="R180"/>
+<element name="D1" library="myparts" package="DO-214AB" value="20V" x="21.463" y="15.875" rot="R180"/>
+<element name="Q1" library="myparts" package="LFPAK" value="P-CHAN" x="26.67" y="7.62"/>
+<element name="C6" library="SparkFun-Passives" package="EIA7343" value="220u" x="13.97" y="17.78" rot="R90"/>
 <element name="R4" library="SparkFun-Passives" package="0603-RES" value="210k" x="5.715" y="21.59"/>
-<element name="R8" library="SparkFun-Passives" package="0603-RES" value="56k" x="2.54" y="8.255" rot="R180"/>
-<element name="R9" library="SparkFun-Passives" package="1206" value="0.003" x="14.605" y="2.54"/>
-<element name="U$16" library="myparts" package="SOIC-08" value="LT1619SO-8" x="13.335" y="6.604" rot="R270"/>
-<element name="C2_CHG1" library="SparkFun" package="0603-CAP" value="150p" x="6.35" y="8.255" rot="R180"/>
-<element name="C2_CHG2" library="SparkFun" package="0603-CAP" value="0.015u" x="2.54" y="5.969" rot="R180"/>
+<element name="R3" library="SparkFun-Passives" package="0603-RES" value="56k" x="2.54" y="8.255" rot="R180"/>
+<element name="RSENSE" library="SparkFun-Passives" package="1206" value="0.003" x="14.605" y="2.54"/>
+<element name="U1" library="myparts" package="SOIC-08" value="LT1619SO-8" x="13.335" y="6.604" rot="R270"/>
+<element name="C4" library="SparkFun" package="0603-CAP" value="150p" x="6.35" y="8.255" rot="R180"/>
+<element name="C3" library="SparkFun" package="0603-CAP" value="0.015u" x="2.54" y="5.969" rot="R180"/>
 <element name="R1" library="SparkFun-Passives" package="0603-RES" value="47k" x="6.35" y="5.969" rot="R180"/>
-<element name="C2_CHG3" library="SparkFun" package="0603-CAP" value="0.1u" x="13.335" y="10.16" rot="R180"/>
-<element name="U$3" library="myparts" package="LFPAK" value="MOSFET_NP-S08" x="20.955" y="7.62"/>
+<element name="C5" library="SparkFun" package="0603-CAP" value="0.1u" x="13.335" y="10.16" rot="R180"/>
+<element name="Q2" library="myparts" package="LFPAK" value="P-CHAN" x="20.955" y="7.62"/>
 <element name="C1" library="SparkFun-Passives" package="1210" value="150u" x="32.385" y="10.541" rot="R180"/>
 <element name="C2" library="SparkFun-Passives" package="1210" value="150u" x="32.385" y="5.715" rot="R180"/>
-<element name="ATTY" library="SparkFun-Connectors" package="1X02" value="" x="19.05" y="21.463"/>
-<element name="BATT" library="SparkFun-Connectors" package="1X02" value="" x="36.83" y="9.906" rot="R270"/>
-<element name="U$1" library="myparts" package="POT-TOP-BOURNS" value="POT3310Y-001" x="5.715" y="17.145" rot="R180"/>
+<element name="VOUT" library="SparkFun-Connectors" package="1X02" value="" x="19.05" y="21.463"/>
+<element name="VIN" library="SparkFun-Connectors" package="1X02" value="" x="36.83" y="9.906" rot="R270"/>
+<element name="POT1" library="myparts" package="POT-TOP-BOURNS" value="50K" x="5.715" y="17.145" rot="R180"/>
 <element name="U$2" library="myparts" package="DP_LOGO" value="DP_LOGO" x="34.29" y="19.177" rot="MR0"/>
 <element name="U$4" library="SparkFun-Aesthetics" package="OSHW-LOGO-M" value="OSHW-LOGOM" x="25.4" y="19.05" rot="MR0"/>
 </elements>
 <signals>
 <signal name="GND">
-<contactref element="R8" pad="1"/>
-<contactref element="U$16" pad="4"/>
-<contactref element="C2_CHG1" pad="2"/>
-<contactref element="C2_CHG2" pad="2"/>
-<contactref element="C2_CHG3" pad="2"/>
-<contactref element="C2" pad="2"/>
-<contactref element="C1" pad="2"/>
-<contactref element="ATTY" pad="2"/>
-<contactref element="BATT" pad="2"/>
-<contactref element="R9" pad="1"/>
-<contactref element="C5" pad="C"/>
 <polygon width="0.4064" layer="1" isolate="0.6096" rank="3">
 <vertex x="0" y="0"/>
 <vertex x="0" y="24.13"/>
@@ -2327,16 +2316,21 @@ Please make sure your boards conform to these design rules.</description>
 <via x="1.905" y="1.905" extent="1-16" drill="0.6" shape="square"/>
 <via x="37.465" y="22.225" extent="1-16" drill="0.6" shape="square"/>
 <via x="37.465" y="1.905" extent="1-16" drill="0.6" shape="square"/>
+<contactref element="C6" pad="C"/>
+<contactref element="VIN" pad="2"/>
+<contactref element="VOUT" pad="2"/>
+<contactref element="C1" pad="2"/>
+<contactref element="C2" pad="2"/>
+<contactref element="C3" pad="2"/>
+<contactref element="C4" pad="2"/>
+<contactref element="U1" pad="4"/>
+<contactref element="C5" pad="2"/>
+<contactref element="RSENSE" pad="1"/>
+<contactref element="R3" pad="1"/>
 </signal>
-<signal name="V_ATTY">
-<contactref element="C5" pad="A"/>
-<contactref element="U$10" pad="C"/>
-<contactref element="R4" pad="2"/>
-<contactref element="U$16" pad="7"/>
-<contactref element="C2_CHG3" pad="1"/>
-<contactref element="ATTY" pad="1"/>
-<wire x1="6.565" y1="21.59" x2="13.33" y2="21.59" width="0.4064" layer="1"/>
-<wire x1="13.33" y1="21.59" x2="13.97" y2="20.95" width="0.4064" layer="1"/>
+<signal name="VOUT">
+<contactref element="U1" pad="7"/>
+<contactref element="C5" pad="1"/>
 <polygon width="0.4064" layer="1" thermals="no">
 <vertex x="17.78" y="13.843"/>
 <vertex x="17.78" y="18.542"/>
@@ -2358,15 +2352,20 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="17.78" y1="7.747" x2="17.272" y2="7.239" width="0.4064" layer="1"/>
 <wire x1="17.272" y1="7.239" x2="15.9512" y2="7.239" width="0.4064" layer="1"/>
 <wire x1="14.185" y1="10.16" x2="15.24" y2="10.16" width="0.4064" layer="1"/>
-<wire x1="19.05" y1="13.97" x2="18.923" y2="15.875" width="0.4064" layer="1"/>
 <wire x1="19.05" y1="13.97" x2="17.78" y2="12.7" width="0.4064" layer="1"/>
 <wire x1="17.78" y1="12.7" x2="17.78" y2="9.652" width="0.4064" layer="1"/>
+<contactref element="C6" pad="A"/>
+<contactref element="D1" pad="C"/>
+<contactref element="R4" pad="2"/>
+<contactref element="VOUT" pad="1"/>
+<wire x1="6.565" y1="21.59" x2="13.33" y2="21.59" width="0.4064" layer="1"/>
+<wire x1="13.33" y1="21.59" x2="13.97" y2="20.95" width="0.4064" layer="1"/>
 </signal>
-<signal name="N$3">
-<contactref element="U$7" pad="P$2"/>
-<contactref element="U$10" pad="A"/>
-<contactref element="U$11" pad="PAD"/>
-<contactref element="U$3" pad="PAD"/>
+<signal name="DRAIN">
+<contactref element="L1" pad="P$2"/>
+<contactref element="D1" pad="A"/>
+<contactref element="Q1" pad="PAD"/>
+<contactref element="Q2" pad="PAD"/>
 <polygon width="0.4064" layer="1">
 <vertex x="18.669" y="11.176"/>
 <vertex x="20.447" y="11.176"/>
@@ -2393,13 +2392,9 @@ Please make sure your boards conform to these design rules.</description>
 <wire x1="22.098" y1="10.922" x2="22.098" y2="10.287" width="0.8128" layer="1"/>
 <wire x1="22.098" y1="10.287" x2="22.987" y2="9.398" width="0.8128" layer="1"/>
 </signal>
-<signal name="V_BATT">
-<contactref element="U$16" pad="8"/>
-<contactref element="U$16" pad="1"/>
-<contactref element="BATT" pad="1"/>
-<contactref element="U$7" pad="P$1"/>
-<contactref element="C1" pad="1"/>
-<contactref element="C2" pad="1"/>
+<signal name="VBATT">
+<contactref element="U1" pad="8"/>
+<contactref element="U1" pad="1"/>
 <polygon width="0.4064" layer="1" thermals="no">
 <vertex x="33.401" y="4.699"/>
 <vertex x="33.401" y="14.224"/>
@@ -2415,32 +2410,18 @@ Please make sure your boards conform to these design rules.</description>
 <via x="13.843" y="8.128" extent="1-16" drill="0.6" shape="square"/>
 <wire x1="13.843" y1="8.509" x2="15.9512" y2="8.509" width="0.4064" layer="1"/>
 <wire x1="13.843" y1="8.128" x2="13.843" y2="8.509" width="0.4064" layer="1"/>
-<wire x1="33.985" y1="10.541" x2="33.985" y2="3.632" width="0.4064" layer="1"/>
 <wire x1="33.985" y1="3.632" x2="34.036" y2="3.556" width="0.4064" layer="1"/>
 <via x="34.036" y="3.556" extent="1-16" drill="0.6" shape="square"/>
 <wire x1="34.036" y1="3.556" x2="18.415" y2="3.556" width="0.4064" layer="16"/>
 <wire x1="18.415" y1="3.556" x2="13.843" y2="8.128" width="0.4064" layer="16"/>
+<contactref element="L1" pad="P$1"/>
+<contactref element="C2" pad="1"/>
+<contactref element="C1" pad="1"/>
+<contactref element="VIN" pad="1"/>
+<wire x1="33.985" y1="5.715" x2="33.985" y2="3.632" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="N$4">
-<contactref element="U$16" pad="6"/>
-<contactref element="U$11" pad="4"/>
-<contactref element="U$3" pad="4"/>
-<wire x1="22.86" y1="4.895" x2="22.86" y2="5.334" width="0.4064" layer="1"/>
-<wire x1="22.86" y1="5.334" x2="22.225" y2="5.969" width="0.4064" layer="1"/>
-<wire x1="22.225" y1="5.969" x2="15.9512" y2="5.969" width="0.4064" layer="1"/>
-<wire x1="28.575" y1="4.895" x2="28.575" y2="5.334" width="0.4064" layer="1"/>
-<wire x1="28.575" y1="5.334" x2="27.94" y2="5.969" width="0.4064" layer="1"/>
-<wire x1="27.94" y1="5.969" x2="22.225" y2="5.969" width="0.4064" layer="1"/>
-</signal>
-<signal name="N$7">
-<contactref element="U$11" pad="1"/>
-<contactref element="U$11" pad="2"/>
-<contactref element="U$11" pad="3"/>
-<contactref element="R9" pad="2"/>
-<contactref element="U$16" pad="5"/>
-<contactref element="U$3" pad="1"/>
-<contactref element="U$3" pad="2"/>
-<contactref element="U$3" pad="3"/>
+<signal name="SOURCE">
+<contactref element="U1" pad="5"/>
 <polygon width="0.4064" layer="1">
 <vertex x="15.24" y="1.143"/>
 <vertex x="15.24" y="4.953"/>
@@ -2448,39 +2429,57 @@ Please make sure your boards conform to these design rules.</description>
 <vertex x="27.559" y="1.143"/>
 </polygon>
 <wire x1="16.002" y1="2.159" x2="17.653" y2="2.159" width="0.8128" layer="1"/>
+<contactref element="Q1" pad="2"/>
+<contactref element="Q1" pad="1"/>
+<contactref element="Q1" pad="3"/>
+<contactref element="Q2" pad="1"/>
+<contactref element="Q2" pad="2"/>
+<contactref element="Q2" pad="3"/>
+<contactref element="RSENSE" pad="2"/>
 </signal>
-<signal name="N$16">
-<contactref element="U$16" pad="2"/>
-<contactref element="U$1" pad="2"/>
+<signal name="FB">
+<contactref element="U1" pad="2"/>
 <wire x1="10.7188" y1="7.239" x2="9.271" y2="7.239" width="0.4064" layer="1"/>
 <wire x1="9.271" y1="7.239" x2="8.636" y2="7.874" width="0.4064" layer="1"/>
-<wire x1="8.636" y1="7.874" x2="8.636" y2="9.398" width="0.4064" layer="1"/>
-<wire x1="8.636" y1="9.398" x2="5.715" y2="12.065" width="0.4064" layer="1"/>
+<wire x1="8.636" y1="7.874" x2="8.636" y2="9.144" width="0.4064" layer="1"/>
+<contactref element="POT1" pad="2"/>
+<wire x1="8.636" y1="9.144" x2="5.715" y2="12.065" width="0.4064" layer="1"/>
 </signal>
 <signal name="N$5">
-<contactref element="U$16" pad="3"/>
+<contactref element="U1" pad="3"/>
 <contactref element="R1" pad="1"/>
-<contactref element="C2_CHG1" pad="1"/>
+<contactref element="C4" pad="1"/>
 <wire x1="7.2" y1="8.255" x2="7.2" y2="5.969" width="0.4064" layer="1"/>
 <wire x1="7.2" y1="5.969" x2="10.7188" y2="5.969" width="0.4064" layer="1"/>
 </signal>
 <signal name="N$1">
 <contactref element="R1" pad="2"/>
-<contactref element="C2_CHG2" pad="1"/>
+<contactref element="C3" pad="1"/>
 <wire x1="3.39" y1="5.969" x2="5.5" y2="5.969" width="0.4064" layer="1"/>
 </signal>
 <signal name="N$2">
-<contactref element="U$1" pad="3"/>
+<contactref element="POT1" pad="3"/>
 <contactref element="R4" pad="1"/>
 <wire x1="3.175" y1="17.145" x2="3.175" y2="19.9" width="0.4064" layer="1"/>
 <wire x1="3.175" y1="19.9" x2="4.865" y2="21.59" width="0.4064" layer="1"/>
 </signal>
 <signal name="N$8">
-<contactref element="U$1" pad="1"/>
-<contactref element="R8" pad="2"/>
+<contactref element="POT1" pad="1"/>
+<contactref element="R3" pad="2"/>
 <wire x1="1.69" y1="11.977" x2="6.858" y2="17.145" width="0.4064" layer="1"/>
 <wire x1="8.255" y1="17.145" x2="6.858" y2="17.145" width="0.4064" layer="1"/>
 <wire x1="1.69" y1="8.255" x2="1.69" y2="11.977" width="0.4064" layer="1"/>
+</signal>
+<signal name="GATE">
+<contactref element="Q1" pad="4"/>
+<contactref element="Q2" pad="4"/>
+<contactref element="U1" pad="6"/>
+<wire x1="22.86" y1="5.334" x2="22.225" y2="5.969" width="0.4064" layer="1"/>
+<wire x1="22.225" y1="5.969" x2="15.9512" y2="5.969" width="0.4064" layer="1"/>
+<wire x1="28.575" y1="5.334" x2="27.94" y2="5.969" width="0.4064" layer="1"/>
+<wire x1="27.94" y1="5.969" x2="22.225" y2="5.969" width="0.4064" layer="1"/>
+<wire x1="28.575" y1="5.334" x2="28.575" y2="4.895" width="0" layer="19" extent="1-1"/>
+<wire x1="22.86" y1="4.895" x2="22.86" y2="5.334" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 </board>
